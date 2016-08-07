@@ -1,0 +1,10 @@
+title = "Jorge A. González"
+theme = "juan-pablo-villegas"
+baseurl = "http://www.jorgea.cc/"
+languageCode = "en-us"
+googleAnalytics = "UA-26129925-1"
+relativeurls = true
+
+[permalinks]
+	artwork = "/:year/:title/"
+	page = "/:title/"

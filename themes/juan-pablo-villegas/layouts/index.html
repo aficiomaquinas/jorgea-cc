@@ -1,0 +1,19 @@
+{{ partial "header.html" . }}
+<nav>
+    <dl>
+    {{ range (where .Data.Pages "Section" "artwork").GroupByDate "2006" }}
+      <div class="year-box">
+        <div class="year-image">
+          <dt>{{ .Key }}</dt>
+          <dd class="featured-image"><dd>
+        </div>
+        <div class="pieces">
+          {{ range .Pages }}
+            <dd><a href="{{ .Permalink }}" data-featured-image-url="{{ .Params.featuredimage }}">{{ .Title }}</a></dd>
+          {{ end }}
+        </div>
+      </div>
+    {{ end }}
+    </dl>
+</nav>
+{{ partial "footer.html" . }}
